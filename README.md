@@ -12,7 +12,7 @@ ZF2 自带的 `Zend\Mvc\ModuleRouteListener` 不方便, 每新的 `Controller` �
 return array(
     'modules' => array(
         //... Your modules
-	'Zfegg/GlobalRouter'
+	    'Zfegg/GlobalRouter'
     ),
 );
 ```

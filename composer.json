@@ -7,6 +7,19 @@
       "email": "moln.xie@gmail.com"
     }
   ],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/zfegg/global-router",
+  "support": {
+    "source": "https://github.com/zfegg/global-router",
+    "issues": "https://github.com/zfegg/global-router/issues"
+  },
+  "keywords": [
+    "global",
+    "route",
+    "zf2",
+    "zfegg"
+  ],
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5",
     "zendframework/zend-mvc": "^3.0"
