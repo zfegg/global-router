@@ -68,7 +68,7 @@ class GlobalModuleRouteListener extends AbstractListenerAggregate
             $matches->setParam(self::ORIGINAL_CONTROLLER, $controller);
 
             /** @var \Zend\Mvc\Controller\ControllerManager $controllerLoader */
-            $controllerLoader = $e->getApplication()->getServiceManager()->get('ControllerLoader');
+            $controllerLoader = $e->getApplication()->getServiceManager()->get('ControllerManager');
             $ctrlClass = $this->convertName($module) . '\\Controller\\';
             $ctrlClass .= $this->convertName($controller);
             $controller = $ctrlClass;
