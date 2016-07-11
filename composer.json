@@ -1,0 +1,22 @@
+{
+  "name": "zfegg/global-router",
+  "description": "Zend Framework V2 or V3 global route config '/[:module[:/controller[:/action]]]'",
+  "authors": [
+    {
+      "name": "Moln",
+      "email": "moln.xie@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.5",
+    "zendframework/zend-mvc": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zfegg\\GlobalRouter\\": "src/"
+    }
+  },
+  "require": {
+    "zendframework/zend-eventmanager": "^2.4 || ^3.0"
+  }
+}
