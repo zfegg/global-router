@@ -1,39 +1,23 @@
 # Zend Framework Global Router - ZF公共路由
 
+ZendMvc 自带的 `Zend\Mvc\ModuleRouteListener` 不方便, 每新的 `Controller` 都需要在 `ControllerManager` 配置下.
+`Zfegg\GlobalRouter\GlobalModuleRouteListener`
 
-ZF2 自带的 `Zend\Mvc\ModuleRouteListener` 不方便, 每新的 `Controller` 都需要在 `ControllerManager` 配置下.
-`Gzfextra\Router\GlobalModuleRouteListener`
-
-### Example - 使用举例
-
-在 `config/application.config.php` 中添加模块加载.
+## Installation - 安装
 
 ```
-return array(
-    'modules' => array(
-        //... Your modules
-	    'Zfegg/GlobalRouter'
-    ),
-);
+composer require zfegg/global-router
 ```
 
-或者在自己的模块添加以下监听和配置:
+## Usage - 使用举例
 
-```php
-class Module
-{
-    public function onBootstrap(MvcEvent $e)
-    {
-        $eventManager = $e->getApplication()->getEventManager();
-        $gListener    = new GlobalModuleRouteListener();
-        $gListener->attach($eventManager);
-    }
+首先, 在 `config/modules.config.php` 中添加模块加载.
 
-    public function getConfig()
-    {
-        return GlobalModuleRouteListener::getDefaultRouterConfig();
-    }
-}
+```
+return [
+    //... Your modules
+    'Zfegg\\GlobalRouter'
+];
 ```
 
 默认路由方式: `/module/controller/action/param1/value1/param2/value2/...` , 类似ZF1默认路由
